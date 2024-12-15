@@ -1,0 +1,23 @@
+The project contains several simulation classes in the package `gatling.simulation`.
+
+To specify a simulation class:
+
+1. Open pom.xml
+2. Find the tag `<simulationClass>` and put desired class name
+
+To run Gatling test: `mvn clean gatling:test`
+
+Metrics: ...\target\gatling
+
+Console command to run simulation: mvn clean gatling:test
+
+Console command to run simulation(Produce execution error messages) :mvn clean gatling:test -e
+
+Console command to run simulation with DEBUG:mvn clean gatling:test -X
+
+How to run test with properties:
+
+mvn -Dusers=1 -Dduration=1 -Dchar=300 -Dgatling.simulationClass=gatling.simulation.OpenAISimulation gatling:test -e
+
+mvn -Dusers=1 -Dduration=1 -Dchar=500 -Dgatling.simulationClass=gatling.simulation.DeeplSimulation gatling:test -e
+
